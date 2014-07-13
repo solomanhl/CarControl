@@ -1,0 +1,9 @@
+D:\Project\VS\CarControl\CarControl\bin\Debug\CarControl.exe.config
+D:\Project\VS\CarControl\CarControl\bin\Debug\CarControl.exe
+D:\Project\VS\CarControl\CarControl\bin\Debug\CarControl.pdb
+D:\Project\VS\CarControl\CarControl\obj\Debug\CarControl.csprojResolveAssemblyReference.cache
+D:\Project\VS\CarControl\CarControl\obj\Debug\CarControl.MainForm.resources
+D:\Project\VS\CarControl\CarControl\obj\Debug\CarControl.Properties.Resources.resources
+D:\Project\VS\CarControl\CarControl\obj\Debug\CarControl.csproj.GenerateResource.Cache
+D:\Project\VS\CarControl\CarControl\obj\Debug\CarControl.exe
+D:\Project\VS\CarControl\CarControl\obj\Debug\CarControl.pdb
