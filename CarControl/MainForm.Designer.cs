@@ -90,6 +90,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timerUI = new System.Windows.Forms.Timer(this.components);
+            this.stopauto = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -232,6 +233,7 @@
             this.tabPage2.Controls.Add(this.label5);
             this.tabPage2.Controls.Add(this.licheng);
             this.tabPage2.Controls.Add(this.label3);
+            this.tabPage2.Controls.Add(this.stopauto);
             this.tabPage2.Controls.Add(this.autoATX);
             this.tabPage2.Controls.Add(this.b_ATB);
             this.tabPage2.Controls.Add(this.b_ATP);
@@ -732,6 +734,16 @@
             this.timerUI.Enabled = true;
             this.timerUI.Tick += new System.EventHandler(this.timerUI_Tick);
             // 
+            // stopauto
+            // 
+            this.stopauto.Location = new System.Drawing.Point(521, 7);
+            this.stopauto.Name = "stopauto";
+            this.stopauto.Size = new System.Drawing.Size(60, 23);
+            this.stopauto.TabIndex = 1;
+            this.stopauto.Text = "停止";
+            this.stopauto.UseVisualStyleBackColor = true;
+            this.stopauto.Click += new System.EventHandler(this.stopauto_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -822,6 +834,7 @@
         private System.Windows.Forms.Label minshuiwen;
         private System.Windows.Forms.Label minzhuansu;
         private System.Windows.Forms.Label mindianya;
+        private System.Windows.Forms.Button stopauto;
     }
 }
 

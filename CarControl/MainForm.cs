@@ -80,11 +80,7 @@ namespace CarControl
 
         private void swichComm_Click(object sender, EventArgs e)
         {
-            if (comboBox1.SelectedItem.ToString() != "" && comboBox1.SelectedItem.ToString() != "")
-            {
-                serialPort1.PortName = comboBox1.SelectedItem.ToString();
-                serialPort1.BaudRate = Convert.ToInt32(comboBox2.SelectedItem.ToString());
-            }
+           
 
             try
             {
@@ -98,10 +94,17 @@ namespace CarControl
                 }
                 else
                 {
-                    serialPort1.Open();
-                    isOK.Text = "OK";
-                    isOK.Visible = true;
-                    swichComm.Text = "关闭串口";
+                    if (comboBox1.SelectedItem.ToString() != "" && comboBox1.SelectedItem.ToString() != "")
+                    {
+                        serialPort1.PortName = comboBox1.SelectedItem.ToString();
+                        serialPort1.BaudRate = Convert.ToInt32(comboBox2.SelectedItem.ToString());
+
+
+                        serialPort1.Open();
+                        isOK.Text = "OK";
+                        isOK.Visible = true;
+                        swichComm.Text = "关闭串口";
+                    }
                 }
             }
             catch (Exception)
@@ -231,44 +234,54 @@ namespace CarControl
             recievs = "";
         }
 
-        void ATX02(string []tmp)
+        void ATX02(string[] tmp)
         {
-            chesu.Text = tmp[1];
-            fuhe.Text =tmp[2];
-            shuiwen.Text = tmp[3];
-            jieqimen.Text = tmp[4];
-            zhuansu.Text = tmp[5];
-            dianya.Text = tmp[6];
+            try
+            {
+                chesu.Text = tmp[1];
+                fuhe.Text = tmp[2];
+                shuiwen.Text = tmp[3];
+                jieqimen.Text = tmp[4];
+                zhuansu.Text = tmp[5];
+                dianya.Text = tmp[6];
 
 
 
-            maxspeed = Math.Max(maxspeed, Convert.ToInt32(tmp[1]));
-            maxfuhe = Math.Max(maxfuhe, Convert.ToInt32(tmp[2]));
-            minfuhe = Math.Min(minfuhe, Convert.ToInt32(tmp[2]));
-            maxtempre = Math.Max(maxtempre, Convert.ToInt32(tmp[3]));
-            mintempre = Math.Min(mintempre, Convert.ToInt32(tmp[3]));
-            maxjieqimen = Math.Max(maxjieqimen, Convert.ToInt32(tmp[4]));
-            minjieqimen = Math.Min(minjieqimen, Convert.ToInt32(tmp[4]));
-            maxrpm  = Math.Max(maxrpm , Convert.ToInt32(tmp[5]));
-            minrpm = Math.Min(minrpm, Convert.ToInt32(tmp[5]));
-            maxvolt = Math.Max(maxvolt, Convert.ToSingle(tmp[6]));
-            minvolt = Math.Min(minvolt, Convert.ToSingle(tmp[6]));
+                maxspeed = Math.Max(maxspeed, Convert.ToInt32(tmp[1]));
+                maxfuhe = Math.Max(maxfuhe, Convert.ToInt32(tmp[2]));
+                minfuhe = Math.Min(minfuhe, Convert.ToInt32(tmp[2]));
+                maxtempre = Math.Max(maxtempre, Convert.ToInt32(tmp[3]));
+                mintempre = Math.Min(mintempre, Convert.ToInt32(tmp[3]));
+                maxjieqimen = Math.Max(maxjieqimen, Convert.ToInt32(tmp[4]));
+                minjieqimen = Math.Min(minjieqimen, Convert.ToInt32(tmp[4]));
+                maxrpm = Math.Max(maxrpm, Convert.ToInt32(tmp[5]));
+                minrpm = Math.Min(minrpm, Convert.ToInt32(tmp[5]));
+                maxvolt = Math.Max(maxvolt, Convert.ToSingle(tmp[6]));
+                minvolt = Math.Min(minvolt, Convert.ToSingle(tmp[6]));
 
-            maxchesu.Text = maxspeed.ToString();
-            mafuhe.Text = maxfuhe.ToString();
-            mifuhe.Text = minfuhe.ToString();
-            maxshuiwen.Text = maxtempre.ToString();
-            minshuiwen.Text = mintempre.ToString();
-            maxjieimen.Text = maxjieqimen.ToString();
-            minjieimen.Text = minjieqimen.ToString();
-            maxzhuansu.Text = maxrpm.ToString();
-            minzhuansu.Text = minrpm.ToString();
-            maxdinaya.Text = maxvolt.ToString();
-            mindianya.Text = minvolt.ToString();
+                maxchesu.Text = maxspeed.ToString();
+                mafuhe.Text = maxfuhe.ToString();
+                mifuhe.Text = minfuhe.ToString();
+                maxshuiwen.Text = maxtempre.ToString();
+                minshuiwen.Text = mintempre.ToString();
+                maxjieimen.Text = maxjieqimen.ToString();
+                minjieimen.Text = minjieqimen.ToString();
+                maxzhuansu.Text = maxrpm.ToString();
+                minzhuansu.Text = minrpm.ToString();
+                maxdinaya.Text = maxvolt.ToString();
+                mindianya.Text = minvolt.ToString();
+
+            }
+            catch (Exception)
+            {
+
+            }
+            finally
+            {
+                recievs = "";
+            }
 
 
-
-            recievs = "";
         }
 
         private void b_ATS_Click(object sender, EventArgs e)
@@ -553,6 +566,11 @@ namespace CarControl
         private void autoATX_Click(object sender, EventArgs e)
         {
             timer1.Enabled = true;
+        }
+
+        private void stopauto_Click(object sender, EventArgs e)
+        {
+            timer1.Enabled = false;
         }
 
 
