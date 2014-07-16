@@ -40,7 +40,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.l_TDST = new System.Windows.Forms.TabPage();
             this.maxchesu = new System.Windows.Forms.Label();
             this.chesu = new System.Windows.Forms.Label();
             this.mifuhe = new System.Windows.Forms.Label();
@@ -72,6 +72,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.licheng = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.stopauto = new System.Windows.Forms.Button();
             this.autoATX = new System.Windows.Forms.Button();
             this.b_ATB = new System.Windows.Forms.Button();
             this.b_ATP = new System.Windows.Forms.Button();
@@ -90,11 +91,18 @@
             this.label2 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timerUI = new System.Windows.Forms.Timer(this.components);
-            this.stopauto = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
+            this.l_DST = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.l_FUE = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.l_TFUE = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
+            this.l_TDST.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -182,7 +190,7 @@
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.l_TDST);
             this.tabControl1.Location = new System.Drawing.Point(14, 42);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -200,61 +208,69 @@
             this.tabPage1.Text = "CAN分析仪";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // l_TDST
             // 
-            this.tabPage2.Controls.Add(this.maxchesu);
-            this.tabPage2.Controls.Add(this.chesu);
-            this.tabPage2.Controls.Add(this.mifuhe);
-            this.tabPage2.Controls.Add(this.mafuhe);
-            this.tabPage2.Controls.Add(this.fuhe);
-            this.tabPage2.Controls.Add(this.label4);
-            this.tabPage2.Controls.Add(this.label11);
-            this.tabPage2.Controls.Add(this.minjieimen);
-            this.tabPage2.Controls.Add(this.maxjieimen);
-            this.tabPage2.Controls.Add(this.jieqimen);
-            this.tabPage2.Controls.Add(this.minshuiwen);
-            this.tabPage2.Controls.Add(this.maxshuiwen);
-            this.tabPage2.Controls.Add(this.shuiwen);
-            this.tabPage2.Controls.Add(this.label12);
-            this.tabPage2.Controls.Add(this.label10);
-            this.tabPage2.Controls.Add(this.minzhuansu);
-            this.tabPage2.Controls.Add(this.maxzhuansu);
-            this.tabPage2.Controls.Add(this.zhuansu);
-            this.tabPage2.Controls.Add(this.label9);
-            this.tabPage2.Controls.Add(this.mindianya);
-            this.tabPage2.Controls.Add(this.maxdinaya);
-            this.tabPage2.Controls.Add(this.dianya);
-            this.tabPage2.Controls.Add(this.label8);
-            this.tabPage2.Controls.Add(this.xinshishijian);
-            this.tabPage2.Controls.Add(this.label7);
-            this.tabPage2.Controls.Add(this.pinjunyouhao);
-            this.tabPage2.Controls.Add(this.label6);
-            this.tabPage2.Controls.Add(this.shunshiyouhao);
-            this.tabPage2.Controls.Add(this.label5);
-            this.tabPage2.Controls.Add(this.licheng);
-            this.tabPage2.Controls.Add(this.label3);
-            this.tabPage2.Controls.Add(this.stopauto);
-            this.tabPage2.Controls.Add(this.autoATX);
-            this.tabPage2.Controls.Add(this.b_ATB);
-            this.tabPage2.Controls.Add(this.b_ATP);
-            this.tabPage2.Controls.Add(this.b_ATZ);
-            this.tabPage2.Controls.Add(this.b_ATR);
-            this.tabPage2.Controls.Add(this.b_ATX14);
-            this.tabPage2.Controls.Add(this.b_ATX13);
-            this.tabPage2.Controls.Add(this.b_ATX12);
-            this.tabPage2.Controls.Add(this.b_ATX11);
-            this.tabPage2.Controls.Add(this.b_ATX031);
-            this.tabPage2.Controls.Add(this.b_ATX03);
-            this.tabPage2.Controls.Add(this.b_ATX02);
-            this.tabPage2.Controls.Add(this.b_ATX01);
-            this.tabPage2.Controls.Add(this.b_ATS);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(907, 561);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "OBDII开发模块";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.l_TDST.Controls.Add(this.maxchesu);
+            this.l_TDST.Controls.Add(this.chesu);
+            this.l_TDST.Controls.Add(this.mifuhe);
+            this.l_TDST.Controls.Add(this.mafuhe);
+            this.l_TDST.Controls.Add(this.fuhe);
+            this.l_TDST.Controls.Add(this.label4);
+            this.l_TDST.Controls.Add(this.label11);
+            this.l_TDST.Controls.Add(this.minjieimen);
+            this.l_TDST.Controls.Add(this.maxjieimen);
+            this.l_TDST.Controls.Add(this.jieqimen);
+            this.l_TDST.Controls.Add(this.minshuiwen);
+            this.l_TDST.Controls.Add(this.maxshuiwen);
+            this.l_TDST.Controls.Add(this.shuiwen);
+            this.l_TDST.Controls.Add(this.label12);
+            this.l_TDST.Controls.Add(this.label10);
+            this.l_TDST.Controls.Add(this.minzhuansu);
+            this.l_TDST.Controls.Add(this.maxzhuansu);
+            this.l_TDST.Controls.Add(this.zhuansu);
+            this.l_TDST.Controls.Add(this.label9);
+            this.l_TDST.Controls.Add(this.mindianya);
+            this.l_TDST.Controls.Add(this.maxdinaya);
+            this.l_TDST.Controls.Add(this.dianya);
+            this.l_TDST.Controls.Add(this.label8);
+            this.l_TDST.Controls.Add(this.xinshishijian);
+            this.l_TDST.Controls.Add(this.label7);
+            this.l_TDST.Controls.Add(this.pinjunyouhao);
+            this.l_TDST.Controls.Add(this.label6);
+            this.l_TDST.Controls.Add(this.shunshiyouhao);
+            this.l_TDST.Controls.Add(this.label5);
+            this.l_TDST.Controls.Add(this.l_TFUE);
+            this.l_TDST.Controls.Add(this.l_FUE);
+            this.l_TDST.Controls.Add(this.label15);
+            this.l_TDST.Controls.Add(this.l_DST);
+            this.l_TDST.Controls.Add(this.licheng);
+            this.l_TDST.Controls.Add(this.label17);
+            this.l_TDST.Controls.Add(this.label16);
+            this.l_TDST.Controls.Add(this.label14);
+            this.l_TDST.Controls.Add(this.label13);
+            this.l_TDST.Controls.Add(this.label3);
+            this.l_TDST.Controls.Add(this.stopauto);
+            this.l_TDST.Controls.Add(this.autoATX);
+            this.l_TDST.Controls.Add(this.b_ATB);
+            this.l_TDST.Controls.Add(this.b_ATP);
+            this.l_TDST.Controls.Add(this.b_ATZ);
+            this.l_TDST.Controls.Add(this.b_ATR);
+            this.l_TDST.Controls.Add(this.b_ATX14);
+            this.l_TDST.Controls.Add(this.b_ATX13);
+            this.l_TDST.Controls.Add(this.b_ATX12);
+            this.l_TDST.Controls.Add(this.b_ATX11);
+            this.l_TDST.Controls.Add(this.b_ATX031);
+            this.l_TDST.Controls.Add(this.b_ATX03);
+            this.l_TDST.Controls.Add(this.b_ATX02);
+            this.l_TDST.Controls.Add(this.b_ATX01);
+            this.l_TDST.Controls.Add(this.b_ATS);
+            this.l_TDST.Location = new System.Drawing.Point(4, 22);
+            this.l_TDST.Name = "l_TDST";
+            this.l_TDST.Padding = new System.Windows.Forms.Padding(3);
+            this.l_TDST.Size = new System.Drawing.Size(907, 561);
+            this.l_TDST.TabIndex = 1;
+            this.l_TDST.Text = "OBDII开发模块";
+            this.l_TDST.UseVisualStyleBackColor = true;
             // 
             // maxchesu
             // 
@@ -566,6 +582,16 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "里程：";
             // 
+            // stopauto
+            // 
+            this.stopauto.Location = new System.Drawing.Point(521, 7);
+            this.stopauto.Name = "stopauto";
+            this.stopauto.Size = new System.Drawing.Size(60, 23);
+            this.stopauto.TabIndex = 1;
+            this.stopauto.Text = "停止";
+            this.stopauto.UseVisualStyleBackColor = true;
+            this.stopauto.Click += new System.EventHandler(this.stopauto_Click);
+            // 
             // autoATX
             // 
             this.autoATX.Location = new System.Drawing.Point(455, 7);
@@ -618,7 +644,7 @@
             // 
             // b_ATX14
             // 
-            this.b_ATX14.Location = new System.Drawing.Point(473, 218);
+            this.b_ATX14.Location = new System.Drawing.Point(7, 295);
             this.b_ATX14.Name = "b_ATX14";
             this.b_ATX14.Size = new System.Drawing.Size(60, 23);
             this.b_ATX14.TabIndex = 0;
@@ -628,7 +654,7 @@
             // 
             // b_ATX13
             // 
-            this.b_ATX13.Location = new System.Drawing.Point(407, 218);
+            this.b_ATX13.Location = new System.Drawing.Point(7, 256);
             this.b_ATX13.Name = "b_ATX13";
             this.b_ATX13.Size = new System.Drawing.Size(60, 23);
             this.b_ATX13.TabIndex = 0;
@@ -638,7 +664,7 @@
             // 
             // b_ATX12
             // 
-            this.b_ATX12.Location = new System.Drawing.Point(341, 218);
+            this.b_ATX12.Location = new System.Drawing.Point(7, 218);
             this.b_ATX12.Name = "b_ATX12";
             this.b_ATX12.Size = new System.Drawing.Size(60, 23);
             this.b_ATX12.TabIndex = 0;
@@ -648,7 +674,7 @@
             // 
             // b_ATX11
             // 
-            this.b_ATX11.Location = new System.Drawing.Point(264, 218);
+            this.b_ATX11.Location = new System.Drawing.Point(7, 178);
             this.b_ATX11.Name = "b_ATX11";
             this.b_ATX11.Size = new System.Drawing.Size(60, 23);
             this.b_ATX11.TabIndex = 0;
@@ -658,7 +684,7 @@
             // 
             // b_ATX031
             // 
-            this.b_ATX031.Location = new System.Drawing.Point(148, 247);
+            this.b_ATX031.Location = new System.Drawing.Point(754, 9);
             this.b_ATX031.Name = "b_ATX031";
             this.b_ATX031.Size = new System.Drawing.Size(85, 23);
             this.b_ATX031.TabIndex = 0;
@@ -668,7 +694,7 @@
             // 
             // b_ATX03
             // 
-            this.b_ATX03.Location = new System.Drawing.Point(148, 218);
+            this.b_ATX03.Location = new System.Drawing.Point(650, 9);
             this.b_ATX03.Name = "b_ATX03";
             this.b_ATX03.Size = new System.Drawing.Size(85, 23);
             this.b_ATX03.TabIndex = 0;
@@ -726,7 +752,7 @@
             // 
             // timer1
             // 
-            this.timer1.Interval = 500;
+            this.timer1.Interval = 300;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // timerUI
@@ -734,15 +760,85 @@
             this.timerUI.Enabled = true;
             this.timerUI.Tick += new System.EventHandler(this.timerUI_Tick);
             // 
-            // stopauto
+            // label13
             // 
-            this.stopauto.Location = new System.Drawing.Point(521, 7);
-            this.stopauto.Name = "stopauto";
-            this.stopauto.Size = new System.Drawing.Size(60, 23);
-            this.stopauto.TabIndex = 1;
-            this.stopauto.Text = "停止";
-            this.stopauto.UseVisualStyleBackColor = true;
-            this.stopauto.Click += new System.EventHandler(this.stopauto_Click);
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("宋体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label13.Location = new System.Drawing.Point(73, 217);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(70, 24);
+            this.label13.TabIndex = 2;
+            this.label13.Text = "DST：";
+            // 
+            // l_DST
+            // 
+            this.l_DST.AutoSize = true;
+            this.l_DST.Font = new System.Drawing.Font("宋体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.l_DST.Location = new System.Drawing.Point(144, 217);
+            this.l_DST.Name = "l_DST";
+            this.l_DST.Size = new System.Drawing.Size(106, 24);
+            this.l_DST.TabIndex = 3;
+            this.l_DST.Text = "00000.00";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("宋体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label14.Location = new System.Drawing.Point(290, 217);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(82, 24);
+            this.label14.TabIndex = 2;
+            this.label14.Text = "TDST：";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("宋体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label15.Location = new System.Drawing.Point(361, 217);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(106, 24);
+            this.label15.TabIndex = 3;
+            this.label15.Text = "00000.00";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("宋体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label16.Location = new System.Drawing.Point(510, 217);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(70, 24);
+            this.label16.TabIndex = 2;
+            this.label16.Text = "FUE：";
+            // 
+            // l_FUE
+            // 
+            this.l_FUE.AutoSize = true;
+            this.l_FUE.Font = new System.Drawing.Font("宋体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.l_FUE.Location = new System.Drawing.Point(581, 217);
+            this.l_FUE.Name = "l_FUE";
+            this.l_FUE.Size = new System.Drawing.Size(106, 24);
+            this.l_FUE.TabIndex = 3;
+            this.l_FUE.Text = "00000.00";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("宋体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label17.Location = new System.Drawing.Point(709, 217);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(82, 24);
+            this.label17.TabIndex = 2;
+            this.label17.Text = "TFUE：";
+            // 
+            // l_TFUE
+            // 
+            this.l_TFUE.AutoSize = true;
+            this.l_TFUE.Font = new System.Drawing.Font("宋体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.l_TFUE.Location = new System.Drawing.Point(780, 217);
+            this.l_TFUE.Name = "l_TFUE";
+            this.l_TFUE.Size = new System.Drawing.Size(106, 24);
+            this.l_TFUE.TabIndex = 3;
+            this.l_TFUE.Text = "00000.00";
             // 
             // MainForm
             // 
@@ -764,8 +860,8 @@
             this.panel1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
+            this.l_TDST.ResumeLayout(false);
+            this.l_TDST.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -784,7 +880,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage l_TDST;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button b_ATB;
@@ -835,6 +931,14 @@
         private System.Windows.Forms.Label minzhuansu;
         private System.Windows.Forms.Label mindianya;
         private System.Windows.Forms.Button stopauto;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label l_DST;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label l_TFUE;
+        private System.Windows.Forms.Label l_FUE;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label16;
     }
 }
 

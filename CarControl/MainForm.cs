@@ -214,7 +214,9 @@ namespace CarControl
                     case "$XYHPOWERS":  //ATX02
                         ATX02(tmp);
                         break;
-
+                    case "$XYHAMT":  //ATX12
+                        ATX12(tmp);
+                        break;
                     default:
                         break;
                 }
@@ -224,14 +226,25 @@ namespace CarControl
 
         void ATX01(string []tmp)
         {
-            int length = tmp.Length;
+            try
+            {
+                int length = tmp.Length;
 
-            licheng.Text = tmp[1];
-            shunshiyouhao.Text = tmp[2];
-            pinjunyouhao.Text = tmp[3];
-            xinshishijian.Text = tmp[4] + "秒";
+                licheng.Text = tmp[1];
+                shunshiyouhao.Text = tmp[2];
+                pinjunyouhao.Text = tmp[3];
+                xinshishijian.Text = tmp[4] + "秒";
+            }
+            catch(Exception )
+            {
 
-            recievs = "";
+            }
+            finally
+            {
+                recievs = "";
+            }
+
+            
         }
 
         void ATX02(string[] tmp)
@@ -271,6 +284,29 @@ namespace CarControl
                 maxdinaya.Text = maxvolt.ToString();
                 mindianya.Text = minvolt.ToString();
 
+            }
+            catch (Exception)
+            {
+
+            }
+            finally
+            {
+                recievs = "";
+            }
+
+
+        }
+
+        void ATX12(string[] tmp)
+        {
+            try
+            {
+                int length = tmp.Length;
+
+                l_DST.Text = tmp[1] + "km";
+                l_TDST.Text = tmp[2] + "km";
+                l_FUE.Text = tmp[3] + "升";
+                l_TFUE.Text = tmp[4] + "升";
             }
             catch (Exception)
             {
@@ -465,13 +501,15 @@ namespace CarControl
 
         private void b_ATX12_Click(object sender, EventArgs e)
         {
-            string sends = "AT12" + "\r\n";
+            string sends = "ATX12" + "\r\n";
             try
             {
                 if (serialPort1.IsOpen)
                 {
                     serialPort1.Write(sends);
                     textBox1.AppendText("发送（ATX12）：" + sends);
+
+                    timer1tag = "atx12";
                 }
             }
             catch (Exception)
@@ -519,22 +557,25 @@ namespace CarControl
         private void timer1_Tick(object sender, EventArgs e)
         {
             //timer1.Enabled = false;
-            timer1.Interval = 500;
+            timer1.Interval = 300;
 
             timer1cnt++;
             
-            switch (timer1cnt %2)
+            switch (timer1cnt %3)
             {
                 case 0:
-                    b_ATX02_Click(sender, e);
+                    b_ATX01_Click(sender, e);
                     break;
                 case 1:
-                    b_ATX01_Click(sender, e);
+                    b_ATX02_Click(sender, e);
+                    break;
+                case 2:
+                    b_ATX12_Click(sender, e);
                     break;
                 default:
                     break;
             }
-            
+
             
 
             //textBox1.AppendText("接收：" + recievs + "\r\n");
